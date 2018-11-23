@@ -8,8 +8,8 @@
 
 module load anaconda/python3
 cd $PBS_O_WORKDIR 
-gcc -fopenmp walk.c -o walk.x
-gcc -fopenmp advection.c -o advection.x
+g++ -fopenmp walk.c -o walk.x
+g++ -fopenmp advection.c -o advection.x
 export OMP_NUM_THREADS=4
 
 ./advection.c
