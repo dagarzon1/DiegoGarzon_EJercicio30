@@ -13,12 +13,12 @@ gcc -fopenmp advection.c -o advection.x
 export OMP_NUM_THREADS=4
 
 ./advection.c
-python advection.py adv_par.pdf
+python advection.py adv_parallel.pdf
 
 c++ advection_serial.c -o adv_ser.x
 
 ./adv_ser.x
-python advection.py adv_ser.pdf
+python advection.py adv_serial.pdf
 
 ./walk.x >> walk.txt
 c++ walk_serial.c -o w_ser.x
