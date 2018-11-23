@@ -21,7 +21,7 @@ c++ advection_serial.c -o adv_ser.x
 python advection.py adv_ser.pdf
 
 ./walk.x >> walk.txt
-python walk.py walk.txt
 c++ walk_serial.c -o w_ser.x
 ./w_ser.x >> walks.txt
+
 python walk.py walks.txt

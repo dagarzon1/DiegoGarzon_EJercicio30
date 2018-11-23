@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 import glob
 import sys
 
-k = np.loadtxt(sys.argv[1])
+k = np.loadtxt('walk.txt')
+l = np.loadtxt('walks.txt')
     
-plt.hist(k)
-plt.savefig(sys.argv[1]+".pdf")
+plt.hist(k, label="parallel")
+plt.hist(l, label="serial")
+plt.savefig("walk.pdf")
